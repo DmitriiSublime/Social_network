@@ -1,3 +1,4 @@
+import React from 'react';
 import GoogleMaps from "./GoogleMaps/GoogleMaps";
 import YandexMaps from "./YandexMaps/YandexMaps";
 

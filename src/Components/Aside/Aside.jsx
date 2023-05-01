@@ -1,13 +1,14 @@
+import React from 'react';
 import './Aside.css';
 
 const Aside = () => {
     return (
         <div className='aside__content'>
             <ul>
-                <a href=''><li>Profile</li></a>
-                <a href=''><li>Music</li></a>
-                <a href=''><li>My Messages</li></a>
-                <a href=''><li>Communities</li></a>
+                <li><a className='item' href=''>Profile</a></li>
+                <li><a className='item' href=''>Music</a></li>
+                <li><a className='item' href=''>My Messages</a></li>
+                <li><a className='item' href=''>Communities</a></li>
             </ul>
         </div>
     )

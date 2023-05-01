@@ -1,21 +1,22 @@
 import './App.css';
 import Header from "./Components/Header/Header";
 import Aside from "./Components/Aside/Aside";
-import Content from "./Components/Content/Profile/Content";
-// import Maps from "./Components/Maps/Maps";
+import Profile from "./Components/Content/Profile/Profile";
+import Posts from "./Components/Content/Posts/Posts";
+
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      {/*<Maps />*/}
+
       <div className="Wrapper">
           <Aside />
-          <Content />
+          <Profile />
+
+
 
       </div>
-
-
 
 
     </div>
