@@ -1,9 +1,15 @@
-.Wrapper {
+.App_Wrapper {
     display: grid;
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     margin-top: 5px;
 }
+
+.App_Wrapper_content {
+    background-color: cornflowerblue;
+}
+
+
 
 /*.App-logo {*/
 /*  height: 40vmin;*/
