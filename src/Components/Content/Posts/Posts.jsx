@@ -8,8 +8,8 @@ const Posts = () => {
             <textarea></textarea>
             <button>Add post</button>
             <button>Delete</button>
-            <Post />
-            <Post />
+            <Post message='Hi how are you?' />
+            <Post message="I'm fine" />
         </div>
     )
 }
