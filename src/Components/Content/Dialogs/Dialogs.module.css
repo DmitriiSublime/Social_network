@@ -1,0 +1,18 @@
+.dialog_content {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialog_name {
+    margin-top: 10px;
+}
+
+.dialog_message {
+    margin-top: 10px;
+}
+
+.active {
+    color: salmon;
+    text-decoration: underline;
+    transition: .3s;
+}
