@@ -12,7 +12,15 @@
 }
 
 .active {
-    color: salmon;
+    color: green;
     text-decoration: underline;
     transition: .3s;
+}
+
+.dialogs_wrapper {
+
+}
+
+.dialog_text{
+
 }
