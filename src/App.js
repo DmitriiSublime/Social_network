@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Content/Profile/Profile";
-import Posts from "./Components/Content/Posts/Posts";
+import Posts from "./Components/Content/Profile/Posts/Posts";
 import Dialogs from "./Components/Content/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Music from "./Components/Content/Music/Music";
