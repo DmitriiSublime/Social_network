@@ -11,9 +11,6 @@ const Posts = () => {
 
     let postsElements = posts.map( p => <Post message={p.message} id={p.id} likesCount={p.likesCount} />)
 
-    // let dialogsElements = dialogs.map( d => <DialogItem name={d.name} id={d.id} /> );
-
-
     return (
         <div className={s.posts_block}>
             <h3>My posts</h3>
@@ -29,8 +26,6 @@ const Posts = () => {
                 </div>
                 <div className={s.posts_message}>
                     { postsElements }
-                    {/*<Post message={postData[0].message} id={postData[0].id} likesCount={postData[0].likesCount} />*/}
-                    {/*<Post message={postData[1].message} id={postData[0].id} likesCount={postData[1].likesCount} />*/}
                 </div>
             </div>
         </div>
