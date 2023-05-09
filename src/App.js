@@ -10,6 +10,7 @@ import Communities from "./Components/Content/Communitis/Communitis";
 
 
 const App = (props) => {
+
     return (
         <BrowserRouter>
             <div className="App">
@@ -18,11 +19,10 @@ const App = (props) => {
                     <Navbar/>
                     <div className='App_Wrapper_content'>
                         <Routes>
-                            <Route path="/profile" element= { <Profile postsData = {props.postsData} />} />
-                            <Route path="/dialogs/*" element= {<Dialogs dialogsData = {props.dialogsData} messagesData = {props.messagesData} />}/>
-
-                            <Route path='/music' element={<Music/>}/>
-                            <Route path='/communities' element={<Communities/>}/>
+                            <Route path="/profile" element= { <Profile posts = {props.posts} />} />
+                            <Route path="/dialogs/*" element= { <Dialogs dialogsData = {props.dialogsData } messagesData = {props.messagesData} />}/>
+                            <Route path='/music' element={ <Music/> }/>
+                            <Route path='/communities' element={ <Communities/> }/>
                         </Routes>
                     </div>
                 </div>

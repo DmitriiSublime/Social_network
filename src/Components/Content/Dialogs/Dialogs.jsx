@@ -4,6 +4,7 @@ import DialogsItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+
     let dialogs = [
         {id: 1, name: 'Dimych'},
         {id: 2, name: 'Ilya'},
