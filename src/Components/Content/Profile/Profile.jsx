@@ -6,14 +6,12 @@ import posts from "./Posts/Posts";
 import post from "./Posts/Post/Post";
 
 const Profile = (props) => {
-
     return (
         <div>
             <ProfileInfo/>
-            <Posts posts={props.posts}/>
+            <Posts posts={props.state.posts}/>
         </div>
 
     )
 }
-
 export default Profile;
