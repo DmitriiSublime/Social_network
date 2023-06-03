@@ -7,6 +7,7 @@ import Dialogs from "./Components/Content/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Music from "./Components/Content/Music/Music";
 import Communities from "./Components/Content/Communitis/Communitis";
+import Friends from "./Components/Content/Friends/Friends";
 
 
 const App = (props) => {
@@ -23,6 +24,7 @@ const App = (props) => {
                             <Route path="/dialogs/*" element= { <Dialogs state = {props.state.dialogsPages} />}/>
                             <Route path='/music' element={ <Music/> }/>
                             <Route path='/communities' element={ <Communities/> }/>
+                            <Route path='/friends' element={ <Friends state = {props.state.sidebar} />}/>
                         </Routes>
                     </div>
                 </div>
