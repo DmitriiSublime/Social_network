@@ -5,8 +5,10 @@ let state = {
         posts : [
             {id: 1, message: 'Hi how are you?', likesCount: 23},
             {id: 2, message: "I'm fine", likesCount: 0}
-        ]
+        ],
+        newPostText : "redux-test",
     },
+
     dialogsPages : {
         dialogs : [
             {id: 1, name: 'Dimych'},
@@ -32,13 +34,24 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export let addPost = () => {
     let newPost = {
-        id: 6, message: postMessage, likesCount: 0
+        id: 6,
+        message: state.profilePages.newPostText,
+        likesCount: 0
     };
     state.profilePages.posts.push(newPost);
+    state.profilePages.newPostText = '';
     rerenderEntireTree(state);
 }
+
+export let updateNewPostText = (newPost) => {
+    state.profilePages.newPostText = newPost;
+    rerenderEntireTree(state);
+}
+
 
 
 export default state;
