@@ -11,7 +11,6 @@ import {updateNewPostText} from "./Components/Redux/State";
 
 
 
-
 const App = (props) => {
 
     return (
