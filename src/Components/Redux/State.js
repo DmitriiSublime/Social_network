@@ -1,22 +1,22 @@
 let store = {
     _state: {
-        profilePages : {
-            posts : [
+        profilePages: {
+            posts: [
                 {id: 1, message: 'Hi how are you?', likesCount: 23},
                 {id: 2, message: "I'm fine", likesCount: 0}
             ],
-            newPostText : "redux-test",
+            newPostText: "redux-test",
         },
 
-        dialogsPages : {
-            dialogs : [
+        dialogsPages: {
+            dialogs: [
                 {id: 1, name: 'Dimych'},
                 {id: 2, name: 'Ilya'},
                 {id: 3, name: 'Rinat'},
                 {id: 4, name: 'Ramil'},
                 {id: 5, name: 'Ruslan'}
             ],
-            messages : [
+            messages: [
                 {id: 1, message: 'Hi'},
                 {id: 2, message: "What's up"},
                 {id: 3, message: "I'm busy today"},
@@ -24,21 +24,23 @@ let store = {
                 {id: 5, message: 'Where are you?'}
             ]
         },
-        sidebar : {
-            friends : [
+        sidebar: {
+            friends: [
                 {id: 1, avatar: '', name: 'Dimych'},
                 {id: 2, avatar: '', name: 'Ilya'},
                 {id: 3, avatar: '', name: 'Rinat'}
             ]
         }
     },
-
-    getState() {
-      return this._state;
+    _callSubscriber() {
+        console.log('State changed');
     },
 
-    _callSubscriber () {
-        console.log('State changed');
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
     },
 
     addPost() {
@@ -51,14 +53,25 @@ let store = {
         this._state.profilePages.newPostText = '';
         this._callSubscriber(this._state);
     },
-
-    updateNewPostText(newPost) {
-        this._state.profilePages.newPostText = newPost;
+    updateNewPostText(newText) {
+        this._state.profilePages.newPostText = newText;
         this._callSubscriber(this._state);
     },
 
-    subscribe(observer) {
-        this._callSubscriber = observer;
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 6,
+                message: this._state.profilePages.newPostText,
+                likesCount: 0
+            };
+            this._state.profilePages.posts.push(newPost);
+            this._state.profilePages.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePages.newPostText = newText;
+            this._callSubscriber(this._state);
+        }
     }
 }
 
