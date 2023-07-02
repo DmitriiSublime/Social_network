@@ -9,7 +9,6 @@ import Communities from "./Components/Content/Communitis/Communitis";
 import Friends from "./Components/Content/Friends/Friends";
 
 const App = (props) => {
-
     return (
         <BrowserRouter>
             <div className="App">
