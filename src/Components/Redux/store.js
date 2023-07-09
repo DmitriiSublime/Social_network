@@ -51,7 +51,6 @@ let store = {
     },
 
     dispatch(action) {
-
         this._state.profilePages = profileReducer(this._state.profilePages, action);
         this._state.dialogsPages = dialogsReducer(this._state.dialogsPages, action);
         this._state.sidebar = sidebarReducer(this._state.sidebar, action);
