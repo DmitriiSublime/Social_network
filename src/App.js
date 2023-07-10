@@ -2,11 +2,11 @@ import './App.css';
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Content/Profile/Profile";
-import Dialogs from "./Components/Content/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Music from "./Components/Content/Music/Music";
 import Communities from "./Components/Content/Communitis/Communitis";
 import Friends from "./Components/Content/Friends/Friends";
+import DialogsContainer from "./Components/Content/Dialogs/DialogsContainer";
 
 const App = (props) => {
     return (
@@ -17,11 +17,8 @@ const App = (props) => {
                     <Navbar/>
                     <div className='App_Wrapper_content'>
                         <Routes>
-                            <Route path="/profile" element= { <Profile
-                                profilePages = {props.state.profilePages}
-                                dispatch={props.dispatch}
-                            />} />
-                            <Route path="/dialogs/*" element= { <Dialogs store={props.store} />}/>
+                            <Route path="/profile" element= { <Profile store={props.store} />} />
+                            <Route path="/dialogs/*" element= { <DialogsContainer store={props.store} />}/>
                             <Route path='/music' element={ <Music/> }/>
                             <Route path='/communities' element={ <Communities/> }/>
                             <Route path='/friends' element={ <Friends state = {props.state.sidebar} />}/>
